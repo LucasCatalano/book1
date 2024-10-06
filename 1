@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción - Curso de Diseño Gráfico y Publicidad</title>
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: radial-gradient(circle, rgba(0,0,0,0.9), rgba(25,25,25,1));
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .container {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 800px;
+            box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .container.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #00d8ff;
+            text-shadow: 0 0 10px rgba(0, 216, 255, 0.8);
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: fadeInUp 1s forwards;
+            animation-delay: 0.5s;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #d3d3d3;
+            margin-bottom: 15px;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: fadeInUp 1s forwards;
+            animation-delay: 1s;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #ccc;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeInUp 1s forwards;
+            animation-delay: 1.5s;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeInUp 1s forwards;
+            animation-delay: 2s;
+        }
+
+        ul li {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        ul li:hover {
+            background: rgba(0, 216, 255, 0.2);
+            transform: translateX(5px);
+        }
+
+        ul li:before {
+            content: '✓';
+            color: #00d8ff;
+            margin-right: 10px;
+        }
+
+        .highlight {
+            color: #00d8ff;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Introducción</h1>
+
+        <p>Bienvenidos al curso de <span class="highlight">Diseño Gráfico y Publicidad Nivel N°1</span>. Basado en herramientas Semi Automatizadas (comúnmente llamadas de arrastre) e Inteligencia Artificial.</p>
+
+        <p>Este e-book está diseñado para guiarte desde los conceptos más básicos hasta las técnicas más avanzadas, utilizando herramientas modernas que combinan la facilidad de uso con el poder de la inteligencia artificial. A lo largo de este curso, aprenderás a crear diseños gráficos y contenido audiovisual para diversas aplicaciones e industrias, utilizando tecnologías innovadoras que están revolucionando el campo del diseño y la publicidad.</p>
+
+        <h2>¿Qué es el diseño gráfico y la publicidad?</h2>
+        <p>El diseño gráfico y la publicidad son disciplinas fundamentales en la comunicación visual y la promoción de productos y servicios. En este curso, abordaremos las bases de ambas áreas, explorando cómo se han transformado con la digitalización y la incorporación de nuevas tecnologías.</p>
+
+        <h2>Importancia de jajajajaaaccacatas semi automatizadas y la IA en el diseño moderno</h2>
+        <p>Las herramientas semi automatizadas, como las de arrastre y la inteligencia artificial, están cambiando la forma en que se conciben y producen los diseños. Estas herramientas no solo facilitan el proceso creativo, sino que también permiten a los diseñadores ampliar su alcance y explorar nuevas posibilidades.</p>
+
+        <h2>Objetivos del curso</h2>
+        <ul>
+            <li>Comprcacacaca gráfico y la publicidad.</li>
+            <li>Utilizar herramientas como <span class="highlight">Canva, Capcut, ChatGPT</span> y <span class="highlight">DALL·E</span> para crear contenido visual y audiovisual.</li>
+            <li>Integrar inteligencia artificial en tus procesos creativos para mejorar la eficiencia y la innovación.</li>
+            <li>Desarrollar y ejecutar estrategias de publicidad efectivas en diferentes medios.</li>
+            <li>Aplicar conocimientos de economía y marketing digital para mejorar el impacto de tus proyectos.</li>
+            <li>Fortalecer tu inteligencia emocional para lograr un éxito sostenido en tu vida cotidiana y tu carrera profesional.</li>
+        </ul>
+
+        <h2>Cómo usar escacaack</h2>
+        <p>Este e-book está estructurado para que puedas seguir el curso de manera secuencial o saltar a las secciones que más te interesen. Cada capítulo te llevará desde la teoría básica hasta la práctica avanzada, con ejemplos y ejercicios que te permitirán aplicar lo aprendido de inmediato.</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.container');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        container.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            observer.observe(container);
+        });
+    </script>
+
+</body>
+</html>
