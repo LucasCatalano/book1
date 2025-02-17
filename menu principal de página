@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Estilo Selva Beliceña</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Fondo con imagen de selva */
+        body {
+            background-image: url('URL_DE_TU_FONDO'); /* 🔴 REEMPLAZA ESTO con la URL de tu imagen de selva */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Animación de entrada */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Marco del contenedor */
+        .marco {
+            position: absolute;
+            width: 85%;
+            height: 85%;
+            background: rgba(34, 85, 40, 0.3); /* Verde oscuro translúcido */
+            backdrop-filter: blur(8px);
+            border-radius: 15px;
+            border: 4px solid rgba(139, 69, 19, 0.6); /* Borde marrón tipo madera */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Contenedor de botones */
+        .contenedor {
+            width: 800px;
+            height: 440px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Botón */
+        .boton {
+            width: 700px;
+            height: 65px;
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            margin-bottom: 18px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            text-decoration: none;
+        }
+
+        .gastronomia { background: linear-gradient(135deg, #8B4513, #D2691E); }
+        .servicios { background: linear-gradient(135deg, #006400, #32CD32); }
+        .tiendas { background: linear-gradient(135deg, #1E90FF, #87CEEB); }
+        .atracciones { background: linear-gradient(135deg, #FFD700, #FF8C00); }
+        .eventos { background: linear-gradient(135deg, #6A5ACD, #9370DB); }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .marco { width: 95%; height: 90%; }
+            .contenedor { width: 95%; height: auto; padding: 20px; }
+            .boton { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 🔴 Aquí puedes cambiar el fondo editando la URL en el CSS de "background-image" -->
+    
+    <!-- Marco temático -->
+    <div class="marco">
+
+        <div class="contenedor">
+            <a href="URL_DE_LA_PAGINA_GASTRONOMIA" class="boton gastronomia">Gastronomía</a>
+            <a href="URL_DE_LA_PAGINA_SERVICIOS" class="boton servicios">Servicios</a>
+            <a href="URL_DE_LA_PAGINA_TIENDAS" class="boton tiendas">Tiendas</a>
+            <a href="URL_DE_LA_PAGINA_ATRACCIONES" class="boton atracciones">Atracciones</a>
+            <a href="URL_DE_LA_PAGINA_EVENTOS" class="boton eventos">Eventos</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
